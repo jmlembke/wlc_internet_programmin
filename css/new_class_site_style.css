@@ -1,0 +1,104 @@
+ /* general styling */
+ body {
+    background-color: #571B53;
+    color: #8D9D9B;
+    margin:0;
+}
+img {
+    max-width: 100%;
+}
+
+/* mobile styling */
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: blue;
+    height: 250px;
+    text-align: center;
+}
+header img {
+    margin: 0 auto;
+    max-width: 200px;
+}
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+nav li {
+    font-size: 1.5em;
+    border-top: 1px solid #fff;
+    font-family: 'Coming Soon', cursive;
+}
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+} 
+nav li:first-child {
+    border-top: none;
+}
+.tablet_desktop {
+    display: none;
+}
+.mobile {
+    display: block;
+}
+.rounded {
+    border-radius: 20px;
+}
+
+/* tablet css */
+@media screen and (min-width: 630px) {
+    .mobile{
+        display: none;
+    }
+    .tablet_desktop{
+        display: block;
+    }
+    header {
+        position: static;
+        padding-bottom: 2%;
+    }
+    nav li {
+    border-top: none;
+    display: inline-block;
+    border-right: 1px solid #fff;
+    }
+    nav li:last-child {
+        border-right: none;
+    }
+    .grid {
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 20px;
+    }
+}
+
+/* desktop css */
+@media screen and (min-width: 990px){
+    header {
+        float: left;
+        width: 25%;
+    }
+    nav {
+        float: right;
+        width: 70%;
+        margin-top: 3em;
+        background: blue;
+    }
+    main {
+        clear: left;
+    }
+    .grid {
+        display:grid;
+        grid-template-columns: 20% auto 10%;
+    }
+}
